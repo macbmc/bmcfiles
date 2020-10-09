@@ -10,24 +10,24 @@ print("Clues will be given if required by the user")
 print("Maximum 2 clues only")
 hidden_number = random.randint(1, 50)
 cn = 0
-times = 0
+Chance = 0
 t1 = 0
 
 m: int = 0
 print("Start guessing")
 print("Number between 1 and 50")
 
-while times < 4:
+while Chance < 4:
     guess = int(input("Enter your guess"))
 
     if guess == hidden_number:
 
         print("Congratulation", name)
-        print("YOU WON!!!")
+        print("YOU WON!!! Well Done...")
         break
     else:
 
-        print("Wrong")
+        print("Opps...Try again")
 
     n = int(input("Do u want clues(1 for yes 0 for no)"))
     if n == 1:
@@ -96,8 +96,8 @@ while times < 4:
 
 
     t1 = cn
-    times = times + 1
+    Chance = Chance + 1
 
-if times >= 4:
+if Chance >= 4:
     print("YOU LOSE!!! ", name)
     print("The number is", hidden_number)
